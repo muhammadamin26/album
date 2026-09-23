@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Маленькая история</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Nunito:wght@400;600;800&display=swap');
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:#493f47;font-family:Nunito,sans-serif;background:#fff8f0;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-2;background:
+radial-gradient(circle at 8% 15%,#ffdbe8 0 7%,transparent 7.5%),
+radial-gradient(circle at 92% 12%,#d9f2ff 0 6%,transparent 6.5%),
+radial-gradient(circle at 88% 85%,#fff0b9 0 8%,transparent 8.5%),
+linear-gradient(135deg,#fffaf4,#f2fbff)}
+header{position:sticky;top:0;z-index:50;height:72px;padding:0 6vw;display:flex;align-items:center;justify-content:space-between;background:#fffaf2dd;backdrop-filter:blur(14px);border-bottom:1px solid #fff}
+.logo{font:700 26px "Baloo 2"}.logo span{color:#ef8eae}
+nav{display:flex;gap:24px}nav a{text-decoration:none;color:#665862;font-weight:800;font-size:14px}
+.hero{min-height:calc(100vh - 72px);display:grid;place-items:center;text-align:center;padding:60px 20px 90px}
+.kicker{font-weight:800;color:#ed8eab;letter-spacing:1px}
+h1{font:700 clamp(58px,10vw,115px)/.82 "Baloo 2";letter-spacing:-4px;margin:15px 0}
+h1 span{color:#ef8fac}
+.hero p{max-width:610px;margin:28px auto;color:#766970;font-size:18px;line-height:1.7}
+.main-photo{position:relative;width:min(350px,82vw);height:min(440px,105vw);margin:38px auto 0;padding:13px 13px 55px;background:#fff;box-shadow:0 22px 55px #66525b25;transform:rotate(-3deg)}
+.main-photo img{width:100%;height:100%;object-fit:cover}
+.tape{position:absolute;width:100px;height:27px;background:#f5d99e;opacity:.85;top:-13px;left:50%;transform:translateX(-50%) rotate(4deg)}
+.sticker{position:absolute;font-size:42px}.star{left:-48px;top:75px}.rainbow{right:-45px;bottom:85px}
+.main-caption{position:absolute;bottom:13px;left:0;right:0;font:600 19px "Baloo 2";color:#76646d}
+.section{padding:90px 6vw}
+.title{text-align:center;font:700 52px "Baloo 2";margin:0}
+.sub{text-align:center;color:#83757d;margin:8px 0 45px}
+.timeline{max-width:1050px;margin:auto;display:grid;gap:75px}
+.memory{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.memory:nth-child(even) .photo-card{order:2}.memory:nth-child(even) .story{order:1}
+.photo-card{background:#fff;padding:13px 13px 48px;box-shadow:0 17px 40px #65525d22;position:relative}
+.photo-card img{display:block;width:100%;height:400px;object-fit:cover}
+.photo-card .caption{position:absolute;bottom:10px;left:0;right:0;text-align:center;font:600 20px "Baloo 2"}
+.date{font-size:13px;color:#ef8fac;font-weight:800;letter-spacing:1px}
+.story h2{font:700 40px "Baloo 2";margin:5px 0 8px}
+.story p{line-height:1.8;color:#776a71}
+.tag{display:inline-block;background:#fff;padding:9px 16px;border-radius:50px;box-shadow:0 7px 20px #66525d18;font-weight:800;margin-top:8px}
+.gallery{max-width:1050px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.g{background:#fff;padding:8px;box-shadow:0 9px 24px #65525d18;transition:.25s}.g:hover{transform:translateY(-6px) rotate(-1deg)}
+.g img{width:100%;aspect-ratio:1/1.1;object-fit:cover;display:block}
+.video-wrap{max-width:900px;margin:45px auto;background:#29242a;padding:12px;border-radius:25px;box-shadow:0 22px 55px #55465030}
+video{display:block;width:100%;max-height:600px;border-radius:17px;background:#111}
+.end{text-align:center;padding:100px 20px 130px}.end .heart{font-size:58px}.end h2{font:700 52px "Baloo 2";margin:5px}.end p{color:#82747b}
+button{border:0;background:#ef8fac;color:#fff;padding:13px 22px;border-radius:50px;font:800 15px Nunito;cursor:pointer}
+@media(max-width:700px){
+nav{display:none}.memory{grid-template-columns:1fr;gap:25px}
+.memory:nth-child(even) .photo-card,.memory:nth-child(even) .story{order:initial}
+.gallery{grid-template-columns:repeat(2,1fr)}
+.photo-card img{height:350px}.title{font-size:43px}h1{letter-spacing:-2px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">Моя <span>история</span> ✨</div>
+  <nav><a href="#story">История</a><a href="#photos">Фото</a><a href="#videos">Видео</a></nav>
+</header>
+
+<section class="hero">
+<div>
+  <div class="kicker">✦ МОЙ МАЛЕНЬКИЙ МИР ✦</div>
+  <h1>Маленькая<br><span>история</span></h1>
+  <p>Самые тёплые воспоминания, улыбки и маленькие открытия — собраны здесь, чтобы сохранить их навсегда.</p>
+  <div class="main-photo">
+    <div class="tape"></div><div class="sticker star">⭐</div><div class="sticker rainbow">🌈</div>
+    <img src="photo_2026-09-14_22-29-30.jpg" alt="Фото ребёнка">
+    <div class="main-caption">моя маленькая история ♡</div>
+  </div>
+  <p style="font-size:14px">↓ листай мою историю</p>
+</div>
+</section>
+
+<section class="section" id="story">
+<h2 class="title">Моя история 🌼</h2>
+<div class="sub">Каждая фотография — маленькая глава</div>
+<div class="timeline">
+
+<article class="memory">
+<div class="photo-card">
+<img src="photo_2026-07-23_14-17-50.jpg" alt="Первое фото">
+<div class="caption">Мой первый день ♡</div>
+</div>
+<div class="story">
+<div class="date">01 • ПЕРВЫЕ МОМЕНТЫ</div>
+<h2>Вот и я!</h2>
+<p>С этого маленького момента начинается моя большая история. Маленький человек, большие эмоции и столько всего впереди.</p>
+<span class="tag">🍼 мой первый этап</span>
+</div>
+</article>
+
+<article class="memory">
+<div class="photo-card">
+<img src="photo_2026-08-12_10-15-22.jpg" alt="Ребёнок">
+<div class="caption">Я расту! ☀️</div>
+</div>
+<div class="story">
+<div class="date">02 • НОВЫЕ ОТКРЫТИЯ</div>
+<h2>Каждый день новый</h2>
+<p>Новые движения, новые улыбки и новые маленькие победы. Каждый день появляется что-то, что хочется запомнить.</p>
+<span class="tag">🌈 расту каждый день</span>
+</div>
+</article>
+
+<article class="memory">
+<div class="photo-card">
+<img src="photo_2026-09-14_22-29-30.jpg" alt="Памятное фото">
+<div class="caption">Самый милый момент</div>
+</div>
+<div class="story">
+<div class="date">03 • ОСОБЕННЫЙ ДЕНЬ</div>
+<h2>Мой маленький мир</h2>
+<p>Такие фотографии хочется пересматривать снова и снова. Потому что детство проходит быстро, а воспоминания остаются.</p>
+<span class="tag">❤️ навсегда</span>
+</div>
+</article>
+
+</div>
+</section>
+
+<section class="section" id="photos">
+<h2 class="title">Мои моменты 📸</h2>
+<div class="sub">Маленькая фотогалерея</div>
+<div class="gallery">
+<div class="g"><img src="photo_2026-07-23_14-17-50.jpg"></div>
+<div class="g"><img src="photo_2026-08-12_10-15-22.jpg"></div>
+<div class="g"><img src="photo_2026-09-14_22-29-30.jpg"></div>
+</div>
+</section>
+
+<section class="section" id="videos">
+<h2 class="title">А ещё я умею двигаться! 🎬</h2>
+<div class="sub">Видео-воспоминания</div>
+
+<div class="video-wrap">
+<video controls poster="photo_2026-09-14_22-29-30.jpg">
+<source src="IMG_6930.mp4" type="video/mp4">
+Ваш браузер не поддерживает видео.
+</video>
+</div>
+
+<div class="video-wrap">
+<video controls poster="photo_2026-08-12_10-15-22.jpg">
+<source src="IMG_6931.mp4" type="video/mp4">
+Ваш браузер не поддерживает видео.
+</video>
+</div>
+</section>
+
+<section class="end">
+<div class="heart">💗</div>
+<h2>Продолжение следует...</h2>
+<p>Самые лучшие страницы этой истории ещё впереди.</p>
+<button onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ В начало</button>
+</section>
+</body>
+</html>
